@@ -1,6 +1,8 @@
-/* ------------------------------------------------------------------------------------------------- */
-/* VARIABLES */
-/* ------------------------------------------------------------------------------------------------- */
+/**
+  |============================
+  | VARIABLES
+  |============================
+*/
 :root {
   /* FONTS */
   --primary-font: Roboto, sans-serif;
@@ -23,23 +25,30 @@
                                 linear-gradient(0deg, #FCFCFC, #FCFCFC)
      */
 }
-/* ------------------------------------------------------------------------------------------------- */
-/* COMMON STYLES START*/
-/* ------------------------------------------------------------------------------------------------- */
+/**
+  |============================
+  | BASE STYLES START
+  |============================
+*/
 body {
   font-family: var(--primary-font);
-  /* font-size: 16px; */
   line-height: 1.5;
   letter-spacing: var(--letter-spacing);
   color: var(--text-color);
   background-color: var(--white-color);
 }
-h1,
-h2,
-h3 {
-  text-transform: capitalize;
+.container {
+  max-width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
-
+/* RESET STYLES */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
 .list {
   list-style: none;
 }
@@ -48,6 +57,30 @@ h3 {
   color: currentColor;
   text-decoration: none;
 }
+.img {
+  display: block;
+  max-width: 100%;
+}
+/*VISUALLY HIDDEN*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/* h1-h3 */
+h1,
+h2,
+h3 {
+  text-transform: capitalize;
+}
+
 /* h2 */
 .title {
   font-size: 36px;
@@ -64,7 +97,7 @@ h3 {
   color: var(--dark-color);
   letter-spacing: var(--letter-spacing);
 }
-
+/* BUTTON */
 .button {
   font-family: inherit;
   font-size: inherit;
@@ -79,14 +112,18 @@ h3 {
   background-color: var(--pressed-state-color);
   cursor: pointer;
 }
-/* COMMON STYLES END*/
 
-/* ------------------------------------------------------------------------------------------------- */
-/* HEADER START*/
-/* ------------------------------------------------------------------------------------------------- */
-
+/**
+  |============================
+  | BASE STYLES END
+  |============================
+*/
+/**
+  |============================
+  | HEADER START
+  |============================
+*/
 /* NAVIGATION */
-
 /* SITE LOGO */
 .site-logo,
 .footer-logo {
@@ -99,7 +136,7 @@ h3 {
   letter-spacing: 0.03em;
 }
 
-.site-logo-text {
+.site-logo-accent {
   color: var(--dark-color);
 }
 /* NAVIGATION LIST */
@@ -184,7 +221,7 @@ h3 {
 .footer {
   background-color: var(--dark-color);
 }
-.footer-logo-text {
+.footer-logo-accent {
   color: var(--light-color);
 }
 .footer-description {
