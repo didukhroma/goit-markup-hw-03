@@ -33,25 +33,13 @@
   | BASE STYLES START
   |============================
 */
-body {
-  font-family: var(--primary-font);
-  line-height: 1.5;
-  letter-spacing: var(--letter-spacing);
-  color: var(--text-color);
-  background-color: var(--white-color);
-}
-.container {
-  max-width: var(--desktop-width);
-  margin: 0 auto;
-  padding: 0 var(--container-padding);
-}
 /* RESET STYLES */
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
-  outline: 1px solid tomato;
+  /* outline: 1px solid tomato; */
 }
 .list {
   list-style: none;
@@ -67,6 +55,7 @@ img {
   max-width: 100%;
   height: auto;
 }
+/* ------------------------------------------------------------------------------------------------- */
 /*VISUALLY HIDDEN*/
 .visually-hidden {
   position: absolute;
@@ -80,7 +69,22 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-/* section */
+/* ------------------------------------------------------------------------------------------------- */
+/* BODY */
+body {
+  font-family: var(--primary-font);
+  line-height: 1.5;
+  letter-spacing: var(--letter-spacing);
+  color: var(--text-color);
+  background-color: var(--white-color);
+}
+/* CONTAINER */
+.container {
+  max-width: var(--desktop-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+/* SECTION */
 section {
   padding: 120px 0;
 }
@@ -101,6 +105,7 @@ h3 {
 }
 /* h3 */
 .subtitle {
+  margin-bottom: 8px;
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
@@ -206,12 +211,16 @@ h3 {
   color: var(--pressed-state-color);
 }
 
-/* HEADER END*/
-
-/* ------------------------------------------------------------------------------------------------- */
-/* MAIN START */
-/* ------------------------------------------------------------------------------------------------- */
-
+/**
+  |============================
+  | HEADER END
+  |============================
+*/
+/**
+  |============================
+  | MAIN START
+  |============================
+*/
 /* HERO */
 .hero {
   padding: 188px 0;
@@ -236,7 +245,6 @@ h3 {
 }
 
 /* ------------------------------------------------------------------------------------------------- */
-
 /* FEATURES */
 .features {
   padding-bottom: 60px;
@@ -253,11 +261,7 @@ h3 {
   );
 }
 
-.features-list-item .subtitle {
-  margin-bottom: 8px;
-}
 /* ------------------------------------------------------------------------------------------------- */
-
 /* SERVICES */
 .services {
   padding-top: 60px;
@@ -277,10 +281,7 @@ h3 {
   );
 }
 /* ------------------------------------------------------------------------------------------------- */
-
 /* TEAM */
-
-/* ------------------------------------------------------------------------------------------------- */
 .team {
   background-color: var(--light-color);
   text-align: center;
@@ -306,16 +307,20 @@ h3 {
   box-shadow: 0px 2px 1px 0px #2e2f4214, 0px 1px 1px 0px #2e2f4229,
     0px 1px 6px 0px #2e2f4214;
 }
-.team-list-wrapper .subtitle {
-  margin-bottom: 8px;
-}
+
 .team-list-description {
   text-transform: capitalize;
 }
-/* MAIN END */
-/* ------------------------------------------------------------------------------------------------- */
-/* FOOTER START*/
-/* ------------------------------------------------------------------------------------------------- */
+/**
+  |============================
+  | MAIN END
+  |============================
+*/
+/**
+  |============================
+  | FOOTER START
+  |============================
+*/
 .footer {
   padding: 101px 0 100px;
   background-color: var(--dark-color);
@@ -328,14 +333,28 @@ h3 {
   max-width: 264px;
   color: var(--light-color);
 }
-
-/* FOOTER END */
-
-/* ------------------------------------------------------------------------------------------------- */
-/* PORTFOLIO START*/
-/* ------------------------------------------------------------------------------------------------- */
-
+/**
+  |============================
+  | FOOTER END
+  |============================
+*/
+/**
+  |============================
+  | PORTFOLIO START
+  |============================
+*/
+.portfolio {
+  padding-top: 96px;
+}
 /* FILTERS */
+.filters-list {
+  display: flex;
+  margin-bottom: 72px;
+  justify-content: center;
+}
+.filters-list-item:not(:last-child) {
+  margin-right: 24px;
+}
 .filters-button {
   color: var(--primary-brand-color);
   background-color: var(--light-color);
@@ -344,9 +363,36 @@ h3 {
 .filters-button:focus {
   color: var(--white-color);
 }
+/* ------------------------------------------------------------------------------------------------- */
 /* PROJECTS */
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.projects-list-item {
+  --interval: 24px;
+  flex-basis: calc(
+    (var(--desktop-width) - 2 * var(--container-padding) - 2 * var(--interval)) /
+      3
+  );
+}
+/* .projects-list-item:not(:nth-child(3n)) {
+  margin-right: 24px;
+} */
+.projects-list-item:not(:nth-child(n + 7)) {
+  margin-bottom: 48px;
+}
 .projects-list-description {
   text-transform: capitalize;
 }
-/* PORTFOLIO END*/
-/* ------------------------------------------------------------------------------------------------- */
+.projects-list-wrapper {
+  padding: 32px 16px;
+  border: 1px solid var(--accent-color);
+  border-top: 0px;
+}
+/**
+  |============================
+  | PORTFOLIO END
+  |============================
+*/
