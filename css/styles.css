@@ -114,6 +114,8 @@ h3 {
 }
 /* BUTTON */
 .button {
+  display: block;
+  min-width: none;
   padding: 16px 32px;
   font-family: inherit;
   font-size: inherit;
@@ -240,18 +242,21 @@ h3 {
 }
 
 .hero-button {
+  margin: 0 auto;
+  min-width: 169px;
+  height: 56px;
+  border: none;
   color: var(--white-color);
   background-color: var(--primary-brand-color);
 }
 
 /* ------------------------------------------------------------------------------------------------- */
 /* FEATURES */
-.features {
-  padding-bottom: 60px;
-}
+
 .features-list {
   display: flex;
-  justify-content: space-between;
+  gap: 24px;
+  /* justify-content: space-between; */
 }
 .features-list-item {
   --interval: 24px;
@@ -260,18 +265,17 @@ h3 {
       4
   );
 }
+/* .features-list-item */
 
 /* ------------------------------------------------------------------------------------------------- */
 /* SERVICES */
-.services {
-  padding-top: 60px;
-}
+
 .services .title {
   margin-bottom: 72px;
 }
 .services-list {
   display: flex;
-  justify-content: space-between;
+  gap: 24px;
 }
 .services-list-item {
   --interval: 24px;
@@ -291,7 +295,7 @@ h3 {
 }
 .team-list {
   display: flex;
-  justify-content: space-between;
+  gap: 24px;
 }
 .team-list-item {
   --interval: 24px;
