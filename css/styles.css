@@ -54,12 +54,14 @@ body {
 }
 
 .link {
+  display: block;
   color: currentColor;
   text-decoration: none;
 }
 .img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 /*VISUALLY HIDDEN*/
 .visually-hidden {
@@ -99,18 +101,20 @@ h3 {
 }
 /* BUTTON */
 .button {
+  padding: 16px 32px;
   font-family: inherit;
   font-size: inherit;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
+  border-color: transparent;
+  border-radius: 4px;
   text-align: center;
-  /* text-transform: capitalize; */
+  cursor: pointer;
 }
 .button:hover,
 .button:focus {
   background-color: var(--pressed-state-color);
-  cursor: pointer;
 }
 
 /**
@@ -123,10 +127,28 @@ h3 {
   | HEADER START
   |============================
 */
+.header {
+  border-bottom: 1px solid var(--accent-color);
+}
+.header > .container,
+.site-nav,
+.nav-list,
+.contacts-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* NAVIGATION */
+.site-nav {
+  margin-right: auto;
+}
+.nav-list-item:not(:last-child) {
+  margin-right: 40px;
+}
 /* SITE LOGO */
-.site-logo,
-.footer-logo {
+.site-logo {
+  padding: 25px 0;
   font-family: var(--logo-font);
   font-size: 18px;
   font-weight: 800;
@@ -139,6 +161,9 @@ h3 {
 .site-logo-accent {
   color: var(--dark-color);
 }
+.site-nav .site-logo {
+  margin-right: 76px;
+}
 /* NAVIGATION LIST */
 .nav-list-link {
   font-weight: 500;
@@ -149,7 +174,10 @@ h3 {
 .nav-list-link:focus {
   color: var(--pressed-state-color);
 }
-
+.nav-list-link,
+.contacts-list-link {
+  padding: 24px 0;
+}
 /* ACTIVE PAGE */
 .link--active {
   color: var(--pressed-state-color);
@@ -159,6 +187,9 @@ h3 {
 .contacts {
   font-style: normal;
   color: var(--text-color);
+}
+.contacts-list-item:not(:last-child) {
+  margin-right: 40px;
 }
 .contacts-list-link[href='mailto:info@devstudio.com']:hover,
 .contacts-list-link[href='mailto:info@devstudio.com']:focus {
@@ -173,10 +204,13 @@ h3 {
 
 /* HERO */
 .hero {
+  padding: 188px 0;
   background-color: var(--dark-color);
   text-align: center;
 }
 .hero-title {
+  max-width: 496px;
+  margin: 0 auto 48px;
   font-size: 56px;
   line-height: 1.07;
   color: var(--white-color);
