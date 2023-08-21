@@ -326,11 +326,12 @@ h3 {
   |============================
 */
 .footer {
-  padding: 101px 0 100px;
+  padding: 100px 0;
   background-color: var(--dark-color);
 }
 .footer .site-logo {
-  margin-bottom: 18px;
+  display: inline-block;
+  margin-bottom: 16px;
 }
 
 .footer-description {
@@ -360,19 +361,23 @@ h3 {
   margin-right: 24px;
 }
 .filters-button {
+  padding: 12px 24px;
   color: var(--primary-brand-color);
   background-color: var(--light-color);
+  border: 1px solid var(--accent-color);
 }
 .filters-button:hover,
 .filters-button:focus {
   color: var(--white-color);
+  border: 1px solid transparent;
 }
 /* ------------------------------------------------------------------------------------------------- */
 /* PROJECTS */
 .projects-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 48px;
+  column-gap: 24px;
 }
 .projects-list-item {
   --interval: 24px;
@@ -381,12 +386,7 @@ h3 {
       3
   );
 }
-/* .projects-list-item:not(:nth-child(3n)) {
-  margin-right: 24px;
-} */
-.projects-list-item:not(:nth-child(n + 7)) {
-  margin-bottom: 48px;
-}
+
 .projects-list-description {
   text-transform: capitalize;
 }
