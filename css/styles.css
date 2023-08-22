@@ -204,11 +204,11 @@ h3 {
   font-style: normal;
   color: var(--text-color);
 }
-.contacts-list-item:not(:last-child) {
+.contacts-list-item:first-child {
   margin-right: 40px;
 }
-.contacts-list-link[href='mailto:info@devstudio.com']:hover,
-.contacts-list-link[href='mailto:info@devstudio.com']:focus {
+.contacts-list-item:first-child:hover,
+.contacts-list-item:first-child:focus {
   color: var(--pressed-state-color);
 }
 
